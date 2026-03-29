@@ -1,0 +1,175 @@
+:root {
+  --bg: #f7f2ea;
+  --bg-soft: #fff9f1;
+  --text: #2a2219;
+  --muted: #67594a;
+  --accent: #b14f2d;
+  --accent-dark: #8a3b1f;
+  --card: #ffffff;
+  --line: #e8dccf;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Avenir Next", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 10% 0%, #fff8ef 0%, transparent 30%),
+    radial-gradient(circle at 90% 20%, #f3e5d2 0%, transparent 26%),
+    var(--bg);
+  min-height: 100vh;
+}
+
+.site {
+  width: min(1040px, 92vw);
+  margin: 0 auto;
+  padding: 20px 0 40px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.brand {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 750;
+  letter-spacing: 0.2px;
+}
+
+.brand small {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  padding: 8px 11px;
+  border-radius: 999px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  border-color: var(--line);
+  background: #fff;
+}
+
+.hero {
+  background: linear-gradient(140deg, var(--card), var(--bg-soft));
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(45, 30, 18, 0.08);
+}
+
+.hero h1 {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 4.2vw, 42px);
+  line-height: 1.12;
+}
+
+.hero p {
+  margin: 0;
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.cta {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button {
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 11px 16px;
+  display: inline-block;
+}
+
+.button-primary {
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+}
+
+.button-secondary {
+  color: var(--text);
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.grid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.card p,
+.content p,
+.content li {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.content {
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.footer {
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+a.inline {
+  color: var(--accent-dark);
+  font-weight: 650;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 22px;
+    border-radius: 18px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+}
