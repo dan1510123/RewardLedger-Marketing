@@ -1,24 +1,32 @@
 # RewardLedger Marketing
 
-This repository hosts the public marketing web presence for RewardLedger.
+This repository hosts the public marketing website for RewardLedger.
 
 ## Purpose
 
-- Provide a public web domain reference for the iOS app listing.
+- Provide a public website URL for the iOS app listing.
 - Publish required ad-authorization information for ad network verification.
-- Keep external compliance-facing content separate from the main app codebase.
+- Keep compliance-facing content separate from the main app codebase.
 
-## Current Status
+## Netlify Deployment
 
-- Marketing site repository is created and public.
-- Ad authorization file is published.
-- Verification is in progress and may take up to 24-48 hours to reflect in ad platform status.
+This site is structured for root-domain hosting on Netlify.
 
-## Immediate Next Steps
+- Home: `/`
+- Support: `/support/`
+- Privacy: `/privacy/`
+- Terms: `/terms/`
+- Ad authorization: `/app-ads.txt`
 
-- Confirm the App Store listing points to this marketing site.
-- Recheck ad platform verification status until it reports as found/authorized.
-- Keep this repository current for any future public-facing compliance updates.
+All internal links and stylesheet references use root-based URLs (for example, `/support/`, `/assets/styles.css`) so navigation works on a normal hosted domain (including `*.netlify.app`).
+
+## AdMob app-ads.txt
+
+`app-ads.txt` is published at the site root and must remain continuously accessible:
+
+- `https://<your-site>/app-ads.txt`
+
+Use the same hostname in your App Store listing website URL so AdMob can crawl it correctly.
 
 ## Ownership
 
